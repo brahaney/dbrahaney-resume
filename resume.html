@@ -1,0 +1,855 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	<title>Daniel Brahaney</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+	<style>
+		/* Utils */
+/*----- Colors -----*/
+/*----- Fonts -----*/
+/*----- Dimensions and sizes -----*/
+/* Base */
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+
+body {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    background: #393e46;
+    /* background: #f8f8f8; */
+    /* margin: 50px 0 100px; */
+    margin: 0;
+    letter-spacing: .3px;
+    color: #39424B;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 1px; }
+
+h2 {
+    font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: .5px; }
+
+h3 {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: .4px;
+    padding-top: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+h3.bold {
+    font-weight: 700; }
+
+h4 {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+h4.bold {
+    font-weight: 700; }
+
+h5 {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 11px; }
+h5.italic {
+    font-style: italic; }
+
+h6 {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 11px; }
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:hover, a:hover > i.fa-external-link, .info-tag-container a:hover .fa.fa-external-link {
+    color: #2895F1;
+}
+
+a .fa-external-link {
+    font-size: 8px;
+    margin-left: 2px;
+    vertical-align: text-top;
+    color: #999;
+}
+
+p, li {
+    font-size: 13px;
+    font-weight: 200;
+    letter-spacing: .4px;
+}
+
+blockquote {
+    font-size: 11px;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    margin: 10px 25px; }
+
+em {
+    color: #999;
+}
+
+ul {
+    margin: 10px 0 0;
+    -webkit-padding-start: 25px;
+}
+
+ul li {
+    padding-left: 10px;
+}
+
+ul.minimal {
+    list-style: none;
+    padding: 0;
+}
+
+ul.minimal li {
+    margin-bottom: 3px;
+    padding-left: 0;
+}
+
+ul.two-column {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 28px;
+    -moz-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 28px;
+    column-gap: 28px;
+}
+
+ul.two-column li {
+    padding-left: 0;
+    padding-bottom: 5px;
+}
+
+@page {
+    size: A4;
+}
+
+.container {
+    padding-top: 20px;
+}
+
+.keyline {
+    width: 45px;
+    /* margin: 8px 0 10px; */
+    margin: 4px 0 10px;
+    border-top: 1px solid #FF5701;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*
+.profile-header {
+    width: auto;
+    max-width:  300px;
+    margin-right: 50px;
+}
+*/
+
+/*
+.profile-pic {
+    width: auto;
+    max-width: 800px;
+    margin-right: auto;
+    /* margin-top: -5px; */
+    /* margin-right: 18px; *//*
+}
+*/
+
+.profile-pic img {
+    height: 150px;
+    width: 120px;
+    border-radius: 10%;
+    padding: 2px;
+    border: 2px solid #FF5701;
+    object-fit: cover;
+    background: #FFFFFF;
+    float: right;
+}
+
+.summary {
+    margin: 5px 0 5px; }
+
+/* Layouts */
+.page {
+    background: #222831;
+    color: #eeeeee;
+    /* width: 612px; */
+    min-height: 792px;
+    display: block;
+    margin: 0 auto;
+    border-top: 10px solid #FF5701;
+    /* padding: 36px 22px 30px 34px; */
+    padding: 50px; /* 50px calc(50px + 10%);*/
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.page:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left-column, .profile-header {
+    float: left;
+    /* width: 160px; */
+    width: 300px;
+    /* margin-right: 20px; */
+    margin-right: 50px;
+    word-wrap: break-word;
+}
+
+.right-column, .profile-pic {
+    width: auto;
+    overflow: hidden;
+    max-width: 850px;
+    /* margin-right: 50px; */
+    margin: 0 auto;
+}
+
+.item {
+    /* margin-bottom: 15px; */
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #393e46;
+}
+
+.item:first-child, .title + .item {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.title {
+    background-color: #393e46;
+}
+
+.title > i {
+    float: left;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.right-column > .container > .title {
+    margin-bottom: 15px;
+}
+
+.gpa {
+    border: 1px solid #FFFFFF;
+    border-radius: 35%;
+    padding: 2px;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+    .page {
+        padding: 35px;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        margin: 0;
+    }
+
+    .skills-container > section > ul > li
+    /*,.languages-container > ul > li */{
+        display: inline;
+    }
+
+    .skills-container > section > ul > li > h6
+    /*,.languages-container > ul > li > h6 */{
+        padding-right: 10px;
+        display: inline;
+    }
+
+    .info-tag-container .info-text {
+        font-size: 14px !important;
+    }
+
+    h3 {
+        font-size: 16px !important;
+    }
+
+    h4 {
+        font-size: 14px !important;
+    }
+
+    h6 {
+        font-size: 12px !important;
+    }
+
+    p, li {
+        font-size: 14px;
+    }
+
+    .item {
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        background: #FFFFFF;
+        color: #000;
+    }
+
+    main {
+        background: #FFFFFF !important;
+        color: black !important;
+    }
+
+    @page {
+        border-top: 2px solid #FFFFFF;
+    }
+
+    .page {
+        color: #000;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 35px 0 35px; /* 35px  35px; */
+        box-shadow: none;
+    }
+
+    .title {
+        background-color: #393e46;
+        color: #FFFFFF;
+        page-break-inside: avoid;
+    }
+
+    .keyline {
+        width: 45px;
+        /* margin: 8px 0 10px; */
+        margin: 4px 0 10px;
+        border-top: 2px solid #FF5701;
+    }
+
+    .page .resume-header,
+    .page .resume-content {
+        padding: 0 35px 0 35px;
+    }
+
+    .container > section {
+        page-break-inside: avoid;
+    }
+
+    .left-column {
+        width: 250px;
+        margin-right: 35px;
+    }
+
+    .left-column .container {
+        page-break-inside: avoid;
+    }
+
+    .fa-external-link {
+        display: none;
+    }
+
+    .gpa {
+        border: 1px solid #393e46;
+        margin-left: 10px;
+    }
+}
+
+/* Components */
+.info-tag-container {
+    margin-bottom: 5px;
+}
+
+.info-tag-container .fa {
+    font-size: 14px;
+    width: 12px;
+    margin-right: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.info-tag-container .fa.fa-map-marker {
+    font-size: 16px;
+}
+
+.info-tag-container .fa.fa-mobile {
+    font-size: 18px;
+}
+
+.info-tag-container .fa.fa-envelope-o {
+    font-size: 12px;
+}
+
+.info-tag-container .fa.fa-desktop {
+    font-size: 11px;
+}
+
+.info-tag-container .fa.fa-external-link {
+    width: auto;
+    font-size: 8px;
+    margin-left: 2px;
+    vertical-align: text-top;
+    color: #999;
+}
+
+.info-tag-container .info-text {
+    font-size: 11px;
+    display: inline-block;
+    vertical-align: middle;
+    /* width: 139px; */
+}
+
+.references-container .fa {
+    font-size: 14px;
+}
+
+	</style>
+	</head>
+	<body>
+		<main id="resume" class="page">
+			<header class="resume-header clearfix">
+			    <div class="profile-header">
+			        <h1 class="display-block">Daniel Brahaney</h1>
+			        <h2 class="display-block">Senior Quality/DevOps Engineer</h2>
+			    </div>
+			</header>
+			<div class="resume-content">
+				<aside class="left-column">
+					<div class="container about-container">
+					    <div class="title">
+					        <h3>About</h3>
+					        <div class="keyline"></div>
+					    </div>
+					
+					        <div class="info-tag-container">
+					                    <i class="fa fa-map-marker"></i>
+					        
+					                <h6 class="info-text">43 Church Rd
+					        Bedford NH 03110</h6>
+					        </div>
+					
+					        <div class="info-tag-container">
+					                    <i class="fa fa-envelope"></i>
+					        
+					                <h6 class="info-text">daniel@brahaney.io</h6>
+					        </div>
+					
+					        <div class="info-tag-container">
+					                    <i class="fa fa-mobile-alt"></i>
+					        
+					                <h6 class="info-text">603.674.3635</h6>
+					        </div>
+					
+					
+					                        <div class="info-tag-container">
+					                                    <i class="fa fa-linkedin-square"></i>
+					                        
+					                                <h6 class="info-text">
+					                                    <a href="https://www.linkedin.com/in/brahaney/" target="_blank">
+					                                        in/brahaney <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                    </a>
+					                                </h6>
+					                        </div>
+					                         <div class="info-tag-container">
+					                                     <i class="fab fa-github"></i>
+					                         
+					                                 <h6 class="info-text">
+					                                     <a href="https://github.com/brahaney" target="_blank">
+					                                         brahaney <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+					                         </div>
+					                         <div class="info-tag-container">
+					                                     <i class="fa fa-website"></i>
+					                         
+					                                 <h6 class="info-text">
+					                                     <a href="https://daniel.brahaney.io" target="_blank">
+					                                         daniel.brahaney.io <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+					                         </div>
+					</div>
+					    <div class="skills-container">
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Programming</h3>
+					                        <div class="keyline"></div>
+					                    </div>
+					                    <ul class="minimal">
+					                            <li><h6>python</h6></li>
+					                            <li><h6>javascript</h6></li>
+					                            <li><h6>go</h6></li>
+					                            <li><h6>git</h6></li>
+					                            <li><h6>SQL</h6></li>
+					                    </ul>
+					            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>DevOps</h3>
+					                        <div class="keyline"></div>
+					                    </div>
+					                    <ul class="minimal">
+					                            <li><h6>docker</h6></li>
+					                            <li><h6>kubernetes</h6></li>
+					                            <li><h6>OpenShift</h6></li>
+					                            <li><h6>Elastic Stack</h6></li>
+					                            <li><h6>Jenkins</h6></li>
+					                            <li><h6>Drone CI</h6></li>
+					                            <li><h6>GitLab CI</h6></li>
+					                    </ul>
+					            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Testing</h3>
+					                        <div class="keyline"></div>
+					                    </div>
+					                    <ul class="minimal">
+					                            <li><h6>Test Automation</h6></li>
+					                            <li><h6>TDD/BDD</h6></li>
+					                            <li><h6>Robot Framework</h6></li>
+					                            <li><h6>pytest</h6></li>
+					                            <li><h6>Selenium WebDriver</h6></li>
+					                    </ul>
+					            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Other</h3>
+					                        <div class="keyline"></div>
+					                    </div>
+					                    <ul class="minimal">
+					                            <li><h6>Agile/Scrum</h6></li>
+					                            <li><h6>Jira</h6></li>
+					                            <li><h6>Confluence</h6></li>
+					                            <li><h6>Project Management</h6></li>
+					                    </ul>
+					            </section>
+					    </div>
+				</aside>
+				<div class="right-column">
+					        <div class="container summary-container">
+					            <div class="title">
+					                    <i class="fa fas fa-file-alt"></i>
+					                <h3>Summary</h3>
+					                <div class="keyline"></div>
+					            </div>
+					            <p class="summary">
+					                Dedicated and hardworking professional who is passionate about DevOps, test automation and cloud software development. Ready to take on any challenge, and excited to contribute to new technology and grow as a part of a great team. In my work on test automation, I have become fascinated with all aspects of engineering best practices, including CI/CD, testing, change management, and site reliability engineering. I would welcome the opportunity to dive into any of these areas of expertise.
+					            </p>
+					        </div>
+					<div class="container work-container">
+					    <div class="title">
+					            <i class="fa fas fa-user-tie"></i>
+					        <h3>Experience</h3>
+					        <div class="keyline"></div>
+					    </div>
+					
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Meltwater
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">30/05/2022</span>
+					                            <span class="endDate"> - Present</span>
+					                </h5>
+					            </div>
+					
+					            <h4>Senior QA Engineer</h4>
+					
+					
+					            <ul>
+					                <li>Wrote new test automation framework in python, using pytest, for statistical model APIs created by our data science team</li>
+					                <li>Wrote a test automation framework for validating intermittently-unreliable live data feeds, processing millions of events per day and visualizing error rates and other results in Kibana, and alerting the team if thresholds for incomplete/unusable events are reached. Allowing for simple addition of validation cases whenever engineering discovers a potential issue.</li>
+					                <li>Worked with data scientists and software engineers across two teams to improve unit testing, data validation and test automation</li>
+					                <li>Worked closely with Product Manager on new feature specifications, ensuring that the specifications are clear enough to avoid misunderstandings and ensure the best quality work from our engineering teams.</li>
+					                <li>Worked closely with UX designers on design specs, ensuring usability and making sure the designs provided were able to be implemented. Reducing back-and-forth time between UX and developers prior to/during implementation</li>
+					                <li>Logged defects, verified fixes</li>
+					                <li>Aided in PR reviews and unit test case development</li>
+					                <li>Implemented snyk and SonarCloud into CI/CD pipeline for additional quality/security feedback for teams</li>
+					                <li>Regularly reviewed snyk/sonar results with team, logging Jira cards for issues worth fixing</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Red Hat
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">29/09/2020</span>
+					                            <span class="endDate"> - 30/05/2022</span>
+					                </h5>
+					            </div>
+					
+					            <h4>Senior Software QE Engineer</h4>
+					
+					
+					            <ul>
+					                <li>Performed manual and automated testing on RedHat OpenShift&#x27;s internal software-defined networking modules. Primarily worked with ovn-kubernetes.</li>
+					                <li>Logged defects, and verified defect fixes prior to release</li>
+					                <li>Performed regression testing after security/bug fixes were backported to older supported OpenShift versions</li>
+					                <li>Performed new test-case reviews for team mates, PR reviews for automation code commits</li>
+					                <li>Lead a small breakout team to rework automated testing CI pipeline to require less manual intervention. Previously, test results for dozens or more test runs per day needed to be manually reviewed, informing QA teams of failures that need to be investigated. We developed a chatbot that could alert necessary teams in Slack based on testcase ownership and a database of known errors, leaving only a small portion of &quot;unknown&quot; errors up to manual intervention, freeing up at least 30 hours a week of engineering time from this continuous task.</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        NS1
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">30/01/2020</span>
+					                            <span class="endDate"> - 30/07/2020</span>
+					                </h5>
+					            </div>
+					
+					            <h4>Senior Quality Assurance Engineer</h4>
+					
+					
+					            <ul>
+					                <li>Expanded automated testing of NS1&#x27;s customer premise deployed DNS solution</li>
+					                <li>Created and maintained Postman collections for all API endpoints</li>
+					                <li>Integrated Postman collections into test framework</li>
+					                <li>Developed a new test framework &quot;supersoaker&quot; for &quot;soak&quot; testing. These tests ran for many days at a time, simulating to some degree basic customer use cases and regression-testing against various race conditions and over-consuming processing resource issues that had previously been discovered</li>
+					                <li>Reviewed unit test cases written by developers, assisting in improving unit test coverage and efficacy</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Akamai Technologies
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">29/04/2019</span>
+					                            <span class="endDate"> - 30/01/2020</span>
+					                </h5>
+					            </div>
+					
+					            <h4>DevOps Engineer II</h4>
+					
+					            <p class="summary">DevOps Engineer for a Product Support team, automating support operations and investigating customer issues</p>
+					
+					            <ul>
+					                <li>Designed and implemented &quot;trestle&quot; a set of APIs with integrations to a WebEx Teams chatbot that can provide an interface for automations to streamline support, both for customer support and for our internal product support team.</li>
+					                <li>Wrote playbooks and documentation, in conjunction with new trestle tooling, to help customer support solve more issues without escalating their cases to our team.</li>
+					                <li>Wrote test automation for production monitoring, to give higher visibility into commonly occurring issues in order to address them before customer support escalations.</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Dyn (Acquired by Oracle 2016)
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">29/09/2015</span>
+					                            <span class="endDate"> - 30/03/2019</span>
+					                </h5>
+					            </div>
+					
+					            <h4>Software Engineer In Test</h4>
+					
+					            <p class="summary">I worked on a small team dedicated to providing better tooling and training around testing and quality assurance. We built tools, defined standards and provided training and assistance with all things testing.</p>
+					
+					            <ul>
+					                <li>Built a new test framework for end-to-end testing in python, Robot Framework, Selenium and Docker</li>
+					                <li>Hosted framework as a platform in kubernetes providing scheduling, metrics, alerting and visualization using statsd, graphite, grafana, logstash, kibana, PagerDuty and Slack</li>
+					                <li>Built a slackbot for triggering and checking the status of test runs</li>
+					                <li>Running tests against production applications were used to collect data for KPIs and SLAs by numerous teams</li>
+					                <li>Assisted teams with developing testing strategies and writing better tests</li>
+					                <li>Maintained SonarQube for static analysis testing across the organization</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Single Digits, Inc.
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">30/05/2014</span>
+					                            <span class="endDate"> - 29/09/2015</span>
+					                </h5>
+					            </div>
+					
+					            <h4>QA Engineer</h4>
+					
+					            <p class="summary">Work as part of the Software Development team, ensuring stability and interoperability between our custom software platform and our customer premise network hardware and software, as well as testing for quality and seamless operation of our network management software solutions</p>
+					
+					            <ul>
+					                <li>Wrote and executed manual and automated test cases</li>
+					                <li>Took an environment of 100% manual tests and automated 70% within 6 months, reducing 8-16 hours per week of manual testing time</li>
+					                <li>Built an automation framework using python and selenium and incorporated it into CI/CD pipeline</li>
+					                <li>Managed a lab of nearly 100 network equipment components, including routers, switches, access points and VMWare clusters used in testing</li>
+					                <li>Wrote a framework for automatically provisioning equipment in the lab before each test suite is run</li>
+					                <li>Worked extensively with HP, Cisco, Nomadix, SolutionInc, OpenFlow, Tallac, Aruba, Motorola and Ruckus networking technologies to emulate customer premise networks</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Single Digits, Inc.
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">29/11/2013</span>
+					                            <span class="endDate"> - 30/05/2014</span>
+					                </h5>
+					            </div>
+					
+					            <h4>Product Support and Documentation Specialist</h4>
+					
+					            <p class="summary">Work as part of a cross-functional internal support team tasked with improving knowledge sharing and understanding of common problems and solutions across our thousands of customers' networks and integrations with our software.</p>
+					
+					            <ul>
+					                <li>Wrote new internal technical documentation for many aspects of our software and services that had not been documented at all, or updated in too long</li>
+					                <li>Built a wiki and managed it for the entire organization</li>
+					                <li>Handled escalations from Support that exceed support engineering&#x27;s capabilities, and provide documented solutions in case similar issues arise</li>
+					                <li>Logged significant number of defects with software engineering staff, eventually leading to my promotion to QA Engineer</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Single Digits, Inc.
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">30/10/2012</span>
+					                            <span class="endDate"> - 29/11/2013</span>
+					                </h5>
+					            </div>
+					
+					            <h4>Support Specialist</h4>
+					
+					            <p class="summary">Provide technical support to hotels, malls, apartment complexes and their guests all around the world. Taking incoming calls and providing excellent customer service, helping to resolve their connectivity problems in a timely manner. In addition, a Specialist's duties include assisting the team Supervisor with leadership tasks, training and mentoring, and general technical assistance within the team as a subject matter expert.</p>
+					
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Single Digits, Inc.
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">29/04/2011</span>
+					                            <span class="endDate"> - 30/10/2012</span>
+					                </h5>
+					            </div>
+					
+					            <h4>Support Technician</h4>
+					
+					            <p class="summary">Provide technical support to hotels, malls, apartment complexes and their guests all around the world. Taking incoming calls and providing excellent customer service, helping to resolve their connectivity problems in a timely manner.</p>
+					
+					        </section>
+					</div>
+					<div class="container education-container">
+					    <div class="title">
+					            <i class="fa fas fa-user-graduate"></i>
+					        <h3>Education</h3>
+					        <div class="keyline"></div>
+					    </div>
+					
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Nashua Community College
+					                </h3>
+					                <h5 class="italic pull-right">
+					                            <span class="startDate">30/12/2007</span>
+					                            <span class="endDate"> - 30/12/2009</span>
+					                </h5>
+					            </div>
+					
+					            <h4 class="display-inline">Associate of Science (A.S.) - Telecommunications</h4>
+					
+					
+					        </section>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

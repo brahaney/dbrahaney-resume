@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jsonresume-theme-mocha-responsive": "^1.1.1",
+    "jsonresume-theme-short": "^0.1.7"
+  }
+}
