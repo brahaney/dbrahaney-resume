@@ -565,10 +565,11 @@ ul.two-column li {
 					                    </div>
 					                    <ul class="minimal">
 					                            <li><h6>python</h6></li>
-					                            <li><h6>javascript</h6></li>
-					                            <li><h6>go</h6></li>
+					                            <li><h6>bash</h6></li>
 					                            <li><h6>git</h6></li>
 					                            <li><h6>SQL</h6></li>
+					                            <li><h6>javascript</h6></li>
+					                            <li><h6>go</h6></li>
 					                    </ul>
 					            </section>
 					            <section class="container">
@@ -577,6 +578,10 @@ ul.two-column li {
 					                        <div class="keyline"></div>
 					                    </div>
 					                    <ul class="minimal">
+					                            <li><h6>Linux</h6></li>
+					                            <li><h6>ansible</h6></li>
+					                            <li><h6>terraform</h6></li>
+					                            <li><h6>Serverless Framework</h6></li>
 					                            <li><h6>docker</h6></li>
 					                            <li><h6>kubernetes</h6></li>
 					                            <li><h6>OpenShift</h6></li>
@@ -584,6 +589,8 @@ ul.two-column li {
 					                            <li><h6>Jenkins</h6></li>
 					                            <li><h6>Drone CI</h6></li>
 					                            <li><h6>GitLab CI</h6></li>
+					                            <li><h6>AWS</h6></li>
+					                            <li><h6>DigitalOcean</h6></li>
 					                    </ul>
 					            </section>
 					            <section class="container">
@@ -648,6 +655,9 @@ ul.two-column li {
 					            <ul>
 					                <li>Wrote new test automation framework in python, using pytest, for statistical model APIs created by our data science team</li>
 					                <li>Wrote a test automation framework for validating intermittently-unreliable live data feeds, processing millions of events per day and visualizing error rates and other results in Kibana, and alerting the team if thresholds for incomplete/unusable events are reached. Allowing for simple addition of validation cases whenever engineering discovers a potential issue.</li>
+					                <li>Worked with developers to build load/performance testing with locust, testing API endpoints deployed to kubernetes while capturing kubernetes resource utilization data for the pods under test</li>
+					                <li>Deployed data validation framework using Serverless Framework as AWS lambda triggered by SNS/SQS</li>
+					                <li>Due to certain data sources not on AWS, re-worked data validation framework to also be deployable direct to kubernetes</li>
 					                <li>Worked with data scientists and software engineers across two teams to improve unit testing, data validation and test automation</li>
 					                <li>Worked closely with Product Manager on new feature specifications, ensuring that the specifications are clear enough to avoid misunderstandings and ensure the best quality work from our engineering teams.</li>
 					                <li>Worked closely with UX designers on design specs, ensuring usability and making sure the designs provided were able to be implemented. Reducing back-and-forth time between UX and developers prior to/during implementation</li>
@@ -673,6 +683,7 @@ ul.two-column li {
 					
 					            <ul>
 					                <li>Performed manual and automated testing on RedHat OpenShift&#x27;s internal software-defined networking modules. Primarily worked with ovn-kubernetes.</li>
+					                <li>built, managed and troubleshot OpenShift (kubernetes) clusters for testing and development</li>
 					                <li>Logged defects, and verified defect fixes prior to release</li>
 					                <li>Performed regression testing after security/bug fixes were backported to older supported OpenShift versions</li>
 					                <li>Performed new test-case reviews for team mates, PR reviews for automation code commits</li>
@@ -698,6 +709,7 @@ ul.two-column li {
 					                <li>Created and maintained Postman collections for all API endpoints</li>
 					                <li>Integrated Postman collections into test framework</li>
 					                <li>Developed a new test framework &quot;supersoaker&quot; for &quot;soak&quot; testing. These tests ran for many days at a time, simulating to some degree basic customer use cases and regression-testing against various race conditions and over-consuming processing resource issues that had previously been discovered</li>
+					                <li>Deployed &quot;supersoaker&quot; to kubernetes clusters for long-running tests</li>
 					                <li>Reviewed unit test cases written by developers, assisting in improving unit test coverage and efficacy</li>
 					            </ul>
 					        </section>
