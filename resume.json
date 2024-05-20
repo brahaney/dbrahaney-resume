@@ -31,12 +31,33 @@
     },
     "work": [
       {
+        "company": "Motorola Solutions Inc",
+        "name": "Motorola Solutions Inc",
+        "url": "",
+        "position": "Senior QA Engineer",
+        "startDate": "2023-02-13",
+        "endDate": "",
+        "highlights": [
+          "Redesigned and reimplemented framework for testing on-camera AI analytics capabilities for Avigilon and Pelco security cameras",
+          "Helped add capabilities to our test framework for presenting videos to cameras, analyzing detection results, and doing statistical analysis against ground truth and previous results to determine test success",
+          "Lead the team in designing dozens of tests of our product's AI capabilities",
+          "Lead the team in adopting modern technologies (such as VS Code, docker, and modern CI/CD with GitHub Actions)",
+          "Worked closely with developers on new features to ensure testability would be a consideration of feature design and implementation",
+          "Filed detailed bug reports on issues discovered via manual or automated testing",
+          "Integrated our testing tools into firmware CI/CD pipeline to bring test results to development teams earlier",
+          "Created documentation and training materials and sessions to enable development teams to add more tests to our framework on their own",
+          "Mentored junior members of our QA team, including several co-ops, on testing, coding in python, CI/CD and more"
+        ],
+        "summary": "",
+        "location": "Somerville MA"
+      },
+      {
         "company": "Meltwater",
         "name": "Meltwater",
         "url": "",
         "position": "Senior QA Engineer",
         "startDate": "2022-05-31",
-        "endDate": "",
+        "endDate": "2023-02-13",
         "highlights": [
           "Wrote new test automation framework in python, using pytest, for statistical model APIs created by our data science team",
           "Wrote a test automation framework for validating intermittently-unreliable live data feeds, processing millions of events per day and visualizing error rates and other results in Kibana, and alerting the team if thresholds for incomplete/unusable events are reached. Allowing for simple addition of validation cases whenever engineering discovers a potential issue.",
