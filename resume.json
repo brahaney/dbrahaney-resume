@@ -6,7 +6,7 @@
       "image": "https://avatars.githubusercontent.com/u/4593316?s=400&u=83586fb346cdda3a227f8dbb933025fbfe38a699&v=4",
       "email": "daniel@brahaney.io",
       "phone": "603.674.3635",
-      "summary": "Dedicated and hardworking professional who is passionate about DevOps, test automation and cloud software development. Ready to take on any challenge, and excited to contribute to new technology and grow as a part of a great team. In my work on test automation, I have become fascinated with all aspects of engineering best practices, including CI/CD, testing, change management, and site reliability engineering. I would welcome the opportunity to dive into any of these areas of expertise.",
+      "summary": "Dedicated and hardworking professional who is passionate about DevOps, test automation, quality and cloud software development. Ready to take on any challenge, and excited to contribute to new technology and grow as a part of a great team. In my work on test automation, I have become fascinated with all aspects of engineering best practices, including CI/CD, testing, change management, and site reliability engineering. I would welcome the opportunity to dive into any of these areas of expertise.",
       "location": {
         "countryCode": "US",
         "address": "43 Church Rd\nBedford NH 03110"
@@ -30,13 +30,33 @@
       ]
     },
     "work": [
+        {
+        "company": "IDEXX",
+        "name": "IDEXX",
+        "url": "",
+        "position": "Senior QE Engineer",
+        "startDate": "2024-09-08",
+        "endDate": "",
+        "highlights": [
+          "Came up to speed on a very complex veterinary laboratory business domain as well as a large distributed software ecosystem across multiple clouds and technologies quickly",
+          "Perform exploratory testing on new features being developed for in-house laboratory information management system (LIMS) for IDEXX global vet labs",
+          "Discover and report defects to developers, working closely with business and product to determine whether or not issues are a priority to invest in",
+          "Actively participate in grooming of new feature stories to ensure full understanding of testing scope and method",
+          "Contribute regularly to large library of Postman requests used during our testing",
+          "Assist developers in writing automated acceptance tests for defects and new features",
+          "Write and contribute to cypress UI testing",
+          "Assist in monitoring during deployment windows to find any issues quickly so that DevOps team can address them",
+          "Created new framework for testers to pull logs from many contexts at once by trace ID across multiple cloud logging services (GCP, Azure, and kubernetes) to make tracking actions easier"        ],
+        "summary": "",
+        "location": "Westbrook ME"
+      },
       {
         "company": "Motorola Solutions Inc",
         "name": "Motorola Solutions Inc",
         "url": "",
         "position": "Senior QA Engineer",
         "startDate": "2023-02-13",
-        "endDate": "",
+        "endDate": "2024-08-01",
         "highlights": [
           "Redesigned and reimplemented framework for testing on-camera AI analytics capabilities for Avigilon and Pelco security cameras",
           "Helped add capabilities to our test framework for presenting videos to cameras, analyzing detection results, and doing statistical analysis against ground truth and previous results to determine test success",
@@ -244,6 +264,8 @@
           "Drone CI",
           "GitLab CI",
           "AWS",
+          "Azure",
+          "GCP",
           "DigitalOcean"
         ]
       },
@@ -254,7 +276,9 @@
           "TDD/BDD",
           "Robot Framework",
           "pytest",
-          "Selenium WebDriver"
+          "Selenium WebDriver",
+          "Cypress",
+          "Postman"
         ]
       },
       {
